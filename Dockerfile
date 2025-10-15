@@ -21,8 +21,8 @@ FROM nginx:alpine
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy built app from builder stage into /scryfallgrapher subdirectory
-COPY --from=builder /app/dist /usr/share/nginx/html/scryfallgrapher
+# Copy built app from builder stage into /scryfall-grapher subdirectory
+COPY --from=builder /app/dist /usr/share/nginx/html/scryfall-grapher
 
 # Expose port 80
 EXPOSE 80

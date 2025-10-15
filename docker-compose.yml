@@ -1,11 +1,11 @@
 version: '3.8'
 
 services:
-  scryfallgrapher:
+  scryfall-grapher:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: scryfallgrapher
+    container_name: scryfall-grapher
     restart: unless-stopped
 
     networks:
@@ -15,18 +15,18 @@ services:
       - "traefik.enable=true"
 
       # HTTP routing for localhost (development)
-      - "traefik.http.routers.scryfallgrapher-http.rule=Host(`scryfallgrapher.localhost`)"
-      - "traefik.http.routers.scryfallgrapher-http.entrypoints=web"
-      - "traefik.http.routers.scryfallgrapher-http.service=scryfallgrapher"
+      - "traefik.http.routers.scryfall-grapher-http.rule=Host(`scryfall-grapher.localhost`)"
+      - "traefik.http.routers.scryfall-grapher-http.entrypoints=web"
+      - "traefik.http.routers.scryfall-grapher-http.service=scryfall-grapher"
 
       # HTTPS routing for Tailscale (path-based)
-      - "traefik.http.routers.scryfallgrapher-https.rule=Host(`laptop-13obiidi.taile8d896.ts.net`) && PathPrefix(`/scryfallgrapher`)"
-      - "traefik.http.routers.scryfallgrapher-https.entrypoints=websecure"
-      - "traefik.http.routers.scryfallgrapher-https.tls=true"
-      - "traefik.http.routers.scryfallgrapher-https.service=scryfallgrapher"
+      - "traefik.http.routers.scryfall-grapher-https.rule=Host(`laptop-13obiidi.taile8d896.ts.net`) && PathPrefix(`/scryfall-grapher`)"
+      - "traefik.http.routers.scryfall-grapher-https.entrypoints=websecure"
+      - "traefik.http.routers.scryfall-grapher-https.tls=true"
+      - "traefik.http.routers.scryfall-grapher-https.service=scryfall-grapher"
 
       # Service definition
-      - "traefik.http.services.scryfallgrapher.loadbalancer.server.port=80"
+      - "traefik.http.services.scryfall-grapher.loadbalancer.server.port=80"
       - "traefik.docker.network=proxy"
 
 networks:
