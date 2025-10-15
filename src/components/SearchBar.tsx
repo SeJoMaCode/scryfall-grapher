@@ -23,10 +23,10 @@ export function SearchBar({ onSearch, loading, initialQuery }: SearchBarProps) {
   };
 
   const examples = [
-    { label: 'Modern Red Burn', query: 'f:modern c:red (t:instant or t:sorcery) o:damage' },
-    { label: 'Blue Creatures', query: 'c:blue t:creature cmc<=3' },
-    { label: 'Legendary Dragons', query: 't:legendary t:dragon' },
-    { label: 'Latest Set', query: 'set:mh3' },
+    { label: 'Cheap Removal', query: 'o:destroy cmc<=3 (c:w or c:b)' },
+    { label: 'Card Draw', query: 'o:"draw" (t:instant or t:sorcery) cmc<=3' },
+    { label: 'Big Creatures', query: 't:creature pow>=5 cmc<=6' },
+    { label: 'Commander Legends', query: 'f:commander t:legendary t:creature' },
   ];
 
   return (
