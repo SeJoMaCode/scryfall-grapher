@@ -1,0 +1,272 @@
+.card-list-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #444;
+}
+
+.card-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-left h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.filter-description {
+  background-color: #646cff;
+  color: white;
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.card-count {
+  color: #888;
+  font-size: 0.9em;
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-controls label {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.sort-controls select {
+  padding: 0.4em 0.8em;
+}
+
+.view-controls {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.view-controls button {
+  padding: 0.4em 0.8em;
+  font-size: 1.2em;
+  min-width: 2.5em;
+}
+
+.view-controls button.active {
+  background-color: #646cff;
+  border-color: #646cff;
+  color: white;
+}
+
+.clear-button {
+  background-color: #ff4444;
+  border-color: #ff4444;
+  color: white;
+}
+
+.clear-button:hover {
+  background-color: #ff6666;
+  border-color: #ff6666;
+}
+
+/* Grid View */
+.card-list.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card-list.grid .card-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-list.grid .card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+  border-color: #646cff;
+}
+
+.card-list.grid .card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-list.grid .card-info {
+  padding: 0.8rem;
+}
+
+.card-list.grid .card-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95em;
+  line-height: 1.3;
+}
+
+.card-list.grid .card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85em;
+  color: #888;
+}
+
+/* List View */
+.card-list.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card-list.list .card-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.card-list.list .card-item:hover {
+  background-color: #2a2a2a;
+  border-color: #646cff;
+}
+
+.card-list.list .card-image {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-list.list .card-info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-list.list .card-name {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 0.5rem;
+}
+
+.card-list.list .card-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #888;
+  font-size: 0.9em;
+}
+
+/* Color Indicators */
+.card-colors {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.color-indicator {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+  border: 1px solid #333;
+}
+
+.color-indicator.color-w {
+  background-color: #F0E68C;
+  color: #000;
+}
+
+.color-indicator.color-u {
+  background-color: #0E86D4;
+  color: #fff;
+}
+
+.color-indicator.color-b {
+  background-color: #4A4A4A;
+  color: #fff;
+}
+
+.color-indicator.color-r {
+  background-color: #D32F2F;
+  color: #fff;
+}
+
+.color-indicator.color-g {
+  background-color: #43A047;
+  color: #fff;
+}
+
+.color-indicator.colorless {
+  background-color: #999;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  .card-list.grid .card-item,
+  .card-list.list .card-item {
+    background-color: #ffffff;
+    border-color: #ddd;
+  }
+
+  .card-list.grid .card-item:hover,
+  .card-list.list .card-item:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .card-list.grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .card-list.list .card-image {
+    width: 80px;
+  }
+}

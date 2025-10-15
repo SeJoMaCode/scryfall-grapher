@@ -1,0 +1,81 @@
+.app {
+  width: 100%;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.clickable-title {
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.1s ease;
+  user-select: none;
+}
+
+.clickable-title:hover {
+  color: #646cff;
+  transform: translateY(-1px);
+}
+
+.clickable-title:active {
+  transform: translateY(0);
+}
+
+.subtitle {
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.error-message {
+  background-color: #ff000020;
+  border: 1px solid #ff0000;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #ff6666;
+}
+
+.progress-message {
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-style: italic;
+}
+
+.results {
+  margin-top: 2rem;
+}
+
+.results-count {
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+  color: #888;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #888;
+}
+
+.empty-state p {
+  margin-bottom: 1rem;
+}
+
+.help-text {
+  font-size: 0.9em;
+}
+
+.help-text code {
+  background-color: #333;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  margin: 0 0.3em;
+}
+
+@media (prefers-color-scheme: light) {
+  .help-text code {
+    background-color: #f0f0f0;
+  }
+}

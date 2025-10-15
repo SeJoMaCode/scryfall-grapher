@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+dist
+dist-ssr
+.git
+.gitignore
+.env
+.env.local
+.vscode
+.idea
+*.md
+.claude

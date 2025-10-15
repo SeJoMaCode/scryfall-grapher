@@ -1,0 +1,73 @@
+.custom-recharts-tooltip {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-tooltip-label {
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.custom-tooltip-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.custom-tooltip-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.custom-tooltip-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.custom-tooltip-name {
+  color: #fff;
+  font-weight: 500;
+}
+
+.custom-tooltip-value {
+  color: #fff;
+  font-weight: 600;
+  margin-left: auto;
+  padding-left: 12px;
+}
+
+@media (prefers-color-scheme: light) {
+  .custom-recharts-tooltip {
+    background-color: #ffffff;
+    border-color: #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .custom-tooltip-label,
+  .custom-tooltip-item,
+  .custom-tooltip-name,
+  .custom-tooltip-value {
+    color: #213547;
+  }
+}
