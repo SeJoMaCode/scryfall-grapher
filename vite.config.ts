@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/scryfallgrapher/',
+  base: '/scryfall-grapher/',
   plugins: [
     react(),
     VitePWA({
@@ -17,8 +17,8 @@ export default defineConfig({
         theme_color: '#1a1a1a',
         background_color: '#ffffff',
         display: 'standalone',
-        scope: '/scryfallgrapher/',
-        start_url: '/scryfallgrapher/',
+        scope: '/scryfall-grapher/',
+        start_url: '/scryfall-grapher/',
         icons: [
           {
             src: 'pwa-192x192.png',
