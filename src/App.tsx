@@ -128,6 +128,7 @@ function App() {
 
       {cards.length > 0 && (
         <div className="results">
+          <p className="results-count">Found {cards.length} cards</p>
           <QueryStats cards={cards} />
           <GraphContainer cards={cards} onCardSelection={handleCardSelection} initialChartType={initialChartType} />
           {selectedCards.length > 0 && (

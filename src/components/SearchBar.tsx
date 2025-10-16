@@ -61,33 +61,15 @@ export function SearchBar({ onSearch, loading, initialQuery }: SearchBarProps) {
             {ex.label}
           </button>
         ))}
+        <a
+          href="https://scryfall.com/docs/syntax"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="syntax-link"
+        >
+          Syntax Guide
+        </a>
       </div>
-
-      <details className="syntax-help">
-        <summary>Scryfall Query Syntax Help</summary>
-        <div className="syntax-content">
-          <h3>Common Filters:</h3>
-          <ul>
-            <li><code>t:TYPE</code> - Card type (creature, instant, etc.)</li>
-            <li><code>c:COLOR</code> - Color (w, u, b, r, g)</li>
-            <li><code>cmc=N</code> - Mana value equals N</li>
-            <li><code>cmc&lt;=N</code> - Mana value less than or equal to N</li>
-            <li><code>pow&gt;=N</code> - Power greater than or equal to N</li>
-            <li><code>set:CODE</code> - From a specific set</li>
-            <li><code>r:RARITY</code> - Rarity (c, u, r, m)</li>
-            <li><code>o:TEXT</code> - Oracle text contains TEXT</li>
-            <li><code>f:FORMAT</code> - Legal in format (standard, modern, etc.)</li>
-          </ul>
-          <p>
-            <strong>Operators:</strong> <code>and</code>, <code>or</code>, <code>not</code>, <code>()</code> for grouping
-          </p>
-          <p>
-            <a href="https://scryfall.com/docs/syntax" target="_blank" rel="noopener noreferrer">
-              Full Scryfall Syntax Guide
-            </a>
-          </p>
-        </div>
-      </details>
     </div>
   );
 }
