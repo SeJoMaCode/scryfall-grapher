@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { SearchBar } from './components/SearchBar';
 import { GraphContainer } from './components/GraphContainer';
 import { CardList } from './components/CardList';
+import { QueryStats } from './components/QueryStats';
 import { NormalizedCard } from './types/scryfall';
 import { scryfallApi } from './services/scryfallApi';
 import { normalizeCards } from './utils/cardNormalizer';
@@ -127,7 +128,7 @@ function App() {
 
       {cards.length > 0 && (
         <div className="results">
-          <p className="results-count">Found {cards.length} cards</p>
+          <QueryStats cards={cards} />
           <GraphContainer cards={cards} onCardSelection={handleCardSelection} initialChartType={initialChartType} />
           {selectedCards.length > 0 && (
             <div ref={cardListRef}>

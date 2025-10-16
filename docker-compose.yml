@@ -20,7 +20,7 @@ services:
       - "traefik.http.routers.scryfall-grapher-http.service=scryfall-grapher"
 
       # HTTPS routing for Tailscale (path-based)
-      - "traefik.http.routers.scryfall-grapher-https.rule=Host(`laptop-13obiidi.taile8d896.ts.net`) && PathPrefix(`/scryfall-grapher`)"
+      - "traefik.http.routers.scryfall-grapher-https.rule=Host(`${TAILSCALE_HOSTNAME}`) && PathPrefix(`/scryfall-grapher`)"
       - "traefik.http.routers.scryfall-grapher-https.entrypoints=websecure"
       - "traefik.http.routers.scryfall-grapher-https.tls=true"
       - "traefik.http.routers.scryfall-grapher-https.service=scryfall-grapher"

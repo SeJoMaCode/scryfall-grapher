@@ -108,6 +108,11 @@ npm run build
 docker-compose up -d
 ```
 
+**Access the app:**
+- Local: http://scryfall-grapher.localhost/
+- Remote (Tailscale): https://YOUR-HOSTNAME.ts.net/scryfall-grapher/
+  - Replace `YOUR-HOSTNAME.ts.net` with your actual Tailscale hostname from `.env`
+
 ## Usage Guide
 
 ### Searching for Cards
