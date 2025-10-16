@@ -108,10 +108,6 @@ npm run build
 docker-compose up -d
 ```
 
-**Access the app:**
-- Local: http://scryfallgrapher.localhost/scryfallgrapher/
-- Remote: https://laptop-13obiidi.taile8d896.ts.net/scryfallgrapher/
-
 ## Usage Guide
 
 ### Searching for Cards
